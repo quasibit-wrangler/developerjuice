@@ -1,0 +1,164 @@
+
+
+
+.page{
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+
+  padding: 20px;
+  /*whatever width you want*/
+}
+
+
+#collage-container{
+  display:grid;
+  width: 100%;
+  height: 85vh;
+
+  grid-gap: 15px;
+  grid-template-columns:  repeat(9,1fr);
+  grid-template-rows: repeat(14,1fr);
+
+}
+
+.collage-item.one{
+  grid-column: span 6;
+  grid-row: span 3;
+
+}
+.collage-item.two{
+  grid-column: span 3;
+  grid-row: span 3;
+}
+.collage-item.tree{
+  grid-column: span 3;
+  grid-row: span 6;
+}
+.collage-item.four{
+  grid-column: span 3;
+  grid-row: span 8;
+}
+.collage-item.schphive{
+  grid-column: span 3;
+  grid-row: span 3;
+}
+.collage-item.six{
+  grid-column: span 3;
+  grid-row: span 5;
+}
+.collage-item.seven{
+  grid-column: span 3;
+  grid-row: span 5;
+}
+.collage-item.eight{
+  grid-column: span 6;
+  grid-row: span 3;
+}
+
+
+
+.collage-item img {
+ width: 100%;
+ object-fit: cover;
+ object-position:50% 50%;
+ height: 100%;
+}
+
+#social-media-bucket{
+  margin-top:15px;
+  display:flex;
+  flex-wrap: wrap;
+  /* margin-top:10px;
+  display:grid;
+  grid-gap: 8px;
+  grid-template-columns:  repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr); */
+}
+
+#social-media-bucket:hover{
+  grid-gap:0px;
+  background-color: teal;
+}
+
+.social img {
+ width: 100%;
+ object-fit: cover;
+ object-position:50% 50%;
+ height: 100%;
+}
+.social{
+  flex-basis: 30%;
+}
+/*
+.social-git,.social-twitter{
+
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.social-insta{
+
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+} */
+
+/* HOVER ANIMATION STUFF  */
+
+.special-hover {
+  padding: 20px 40px;
+  background: none;
+  border: none;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+.special-hover:after, .special-hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 2px solid #000;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+.special-hover:after {
+  -webkit-transform: translate(4px, 20px);
+          transform: translate(4px, 20px);
+}
+.special-hover:before {
+  -webkit-transform: translate(-4px, 10px);
+          transform: translate(-4px, 10px);
+}
+.special-hover:hover:after, .special-hover:hover:before {
+  -webkit-transform: translate(-3px, 15px);
+          transform: translate(-3px, 15px);
+}
