@@ -10,6 +10,8 @@ var app = express();
 
 
 app.use(express.static(path.join(__dirname, '/apps/homepage')));
+app.use(express.static(path.join(__dirname, '/apps/homepage/static')));
+
 
 app.listen(port,function(err){
   if(err){
