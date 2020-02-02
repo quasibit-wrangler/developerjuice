@@ -65,7 +65,7 @@
 }
 .collage-item.schphive{
   grid-column: span 3;
-  grid-row: span 3;
+  grid-row: span 4;
 }
 .collage-item.six{
   grid-column: span 3;
@@ -91,43 +91,53 @@
 
 #social-media-bucket{
   margin-top:15px;
-  display:flex;
-  flex-wrap: wrap;
-  /* margin-top:10px;
-  display:grid;
+  /* display:flex;
+  flex-wrap: wrap; */
   grid-gap: 8px;
+  display:grid;
   grid-template-columns:  repeat(3,1fr);
-  grid-template-rows: repeat(3,1fr); */
+  grid-template-rows: repeat(3,1fr);
 }
 
 #social-media-bucket:hover{
   grid-gap:0px;
-  background-color: teal;
-}
-
-.social img {
- width: 100%;
- object-fit: cover;
- object-position:50% 50%;
- height: 100%;
 }
 .social{
-  flex-basis: 30%;
+  padding:5px;
 }
-/*
+.social img{
+  width:3vw;
+  height:3vw;
+}
 .social-git,.social-twitter{
 
   grid-column: span 1;
   grid-row: span 2;
 }
 
+.social-snap{
+  background-color: yellow;
+}
 .social-insta{
+
+  background-color:purple;
 
   grid-column: span 2;
   grid-row: span 1;
 }
+.social-twitter{
+  background-color: cyan;
+}
+.social-git{
+  background-color: #878787;
+}
 
-} */
+#flipside:hover{
+  content: url("static/flipsided-coin.png");
+}
+
+
+
 
 /* HOVER ANIMATION STUFF  */
 
